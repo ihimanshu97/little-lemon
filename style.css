@@ -1,0 +1,138 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'Barlow', sans-serif;
+}
+
+:root {
+    --clr-1: #FEFCF7;
+    --clr-2: #2C343E;
+    --accent: #0E8784;
+}
+
+body {
+    color: var(--clr-2);
+    background-color: var(--clr-1);
+}
+
+a {
+    color: var(--clr-2);
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-size: 2.25rem;
+    text-align: center;
+}
+
+.header-logo {
+    width: 20%;
+    display: block;
+    margin: 1rem auto;
+}
+
+nav {
+    border-top: 2px solid var(--clr-2);
+    border-bottom: 2px solid var(--clr-2);
+}
+
+nav > ol {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+li a {
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+a.active {
+    color: var(--accent);
+}
+
+li a:hover {
+    font-style: italic;
+}
+
+main {
+    margin: 2rem;
+}
+
+.main {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 200px;
+}
+
+.hero {
+    border-radius: 1rem;
+    grid-column: 1 / -1;
+    grid-row: span 2;
+    background: url(./images/hero.jpg) no-repeat center center/cover;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.facility {
+    border-radius: 1rem;
+    background-color: var(--accent);
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    margin: 2rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    color: var(--clr-1);
+    background-color: var(--clr-2);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer-logo {
+    height: 100%;
+    width: 40%;
+}
+
+.footer-logo > img {
+    width: 100%;
+    padding: 1rem;
+}
+
+.social {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.social a {
+    font-size: 1.75rem;
+    color: var(--clr-1);
+}
+
+.social a:hover {
+    color: var(--accent);
+}
+
+@media (max-width: 420px) {
+    footer {
+        flex-direction: column;
+    }
+}
